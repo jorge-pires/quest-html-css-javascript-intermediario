@@ -10,33 +10,27 @@
 .informativo-duvida {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    color: #FFF;
+    color: var(--texto-padrao);
     padding-right: 75px;
 }
 
-.informativo-duvida .titulo {
+.informativo-duvida h1 {
     font-size: 20px;
     font-weight: 900;
     margin-bottom: 11px;
 }
 
-.texto {
-    font-size: 15px;
-    font-weight: 400;
-}
-
 .formulario {
     width: 340px;
     padding: 20px;
-    background-color: #FFF;
+    background-color: var(--formulario);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.formulario .input {
+.formulario .input-item .input {
     margin-bottom: 15px;
     padding: 8px;
     border-radius: 5px;
@@ -44,35 +38,34 @@
     width: 100%;
 }
 
-.formulario .input::placeholder {
-    color: #A8A8A8;
+.formulario .input-item .input::placeholder {
+    color: var(--placeholder-input);
     font-weight: 700;
 }
 
-.formulario .input.maior {
+.formulario .input-item .input.maior {
     height: 100px;
     resize: none;
     margin-bottom: 7px;
 }
 
-.formulario .input-item.ativado .input{
-    border-color: #00C22B;
+.formulario .input-item.preenchido .input{
+    border-color: var(--input-preenchido);
 }
 
-.formulario .input-item.desativado .input{
-    border-color: #F52E2E;
+.formulario .input-item.vazio .input{
+    border-color: var(--input-vazio);
 }
 
-.formulario .aviso {
+.formulario .input-item .aviso {
     display: none;
-    color: #F52E2E;
+    color: var(--input-vazio);
     font-size: 8px;
-    font-weight: 400;
     margin-top: -15px;
     margin-bottom: 6px;
 }
 
-.formulario .aviso.ultimo {
+.formulario .input-item .aviso.ultimo {
     display: none;
     margin-top: -7px;
     margin-bottom: 7px;
@@ -87,16 +80,15 @@
 }
 
 
-.formulario .texto.orientacao {
+.formulario .orientacao {
     margin-bottom: 20px;
     transform: translateX(-7px);
 }
 
 .formulario .btn {
-    font-size: 15px;
     font-weight: 700;
-    background-color: #3BCC87;
-    color: #FFF;
+    background-color: var(--botao);
+    color: var(--texto-padrao);
     height: 42px;
     border-radius: 5px;
     border: none;
